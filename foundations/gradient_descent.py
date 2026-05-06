@@ -5,10 +5,9 @@ class Solution:
         # Update rule:        x = x - learning_rate * f'(x)
         # Round final answer to 5 decimal places
         if iterations == 0: return init
-        ans: float = init
 
         while iterations:
-            ans = ans - (learning_rate * (ans + ans))
+            init = init - (learning_rate * (init + init))
             iterations-=1
-        return round(ans, 5)
+        return round(init, 5)
         pass
